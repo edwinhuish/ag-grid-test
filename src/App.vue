@@ -71,9 +71,9 @@ function quantitySetter(params: ValueGetterParams<DemoAttribute>) {
   }
 
   if (params.data?.idx === 4) {
-    const row1 = rowData.find(row => row.idx === 1)!;
+    const row3 = rowData.find(row => row.idx === 3)!;
     const row5 = rowData.find(row => row.idx === 5)!;
-    return row1.quantity + row5.quantity;
+    return row3.quantity + row5.quantity;
   }
 
   return params.data?.quantity;
