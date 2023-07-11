@@ -43,10 +43,17 @@ const gridOpts = reactive<GridOptions<DemoAttribute>>({
     {
       field: 'idx',
       minWidth: 150,
+      filter: 'agNumberColumnFilter',
     },
     {
       field: 'quantity',
-      editable: true,
+      editable: params => {
+        if (params.data?.idx === 2 || params.data?.idx === 4) {
+          return false;
+        }
+        return true;
+      },
+      filter: 'agNumberColumnFilter',
       valueGetter: params => quantitySetter(params)
     },
   ],
