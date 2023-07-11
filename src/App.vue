@@ -76,5 +76,5 @@ function quantitySetter(params: ValueGetterParams<DemoAttribute>) {
 </script>
 
 <template>
-<AgGridVue v-bind="gridOpts" class="ag-theme-alpine" style="width:100%; height:100%;"></AgGridVue>
+<AgGridVue v-bind="gridOpts" class="ag-theme-alpine" style="width:500px; height:400px;"></AgGridVue>
 </template>
